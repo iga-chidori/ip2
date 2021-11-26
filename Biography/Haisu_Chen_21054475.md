@@ -15,41 +15,26 @@ _Please write your answer immediately below the level-3 headers and delete the g
 ---
 
 ### 1. Who collected the data?
-
-#### 25 words; 2 points; Consider the source of the data and its relation to the underlying data generating process.
-
 Dataset was collected and established responsibly by Murry Cox, an activist and a software engineer, who also built the investigatory website Inside Airbnb (IA) [1].
 
 ---
 
 ### 2. Why did they collect it?
-
-#### 50 words, 4 points; Consider the purposes for which the data was collected and how this might shape its form/content.
-
 The primary purposes are to provide the dataset that allows public to locate and examine the entire listings of short-term rentals on housing in London [2], and to explore the underlying negative effects of Airbnb on the residential communities out of worries about housing affordability and supply in the city [3, 4].  
 
 ---
 
 ### 3. How was it collected?
-
-#### 75 words; 7 points; What was the method by which the data was collected and how might this shape its form/content?
-
 The firsthand data including every detail of each available listing, which directly and publicly shown on its own page on the Airbnb’s site, were snapshotted and obtained by the website scraper using python scripts [5]. Although the source code was not provided, the general process of collection shared by IA was that the web scraper identified the unique ID of each listing within London and extracted all the potential information in the page source, respectively [2, 5]. 
 
 ---
 
 ### 4. What useful information does it contain?
-
-#### 100 words; 12 points; Discuss how the data might support subsequent analysis.
-
 The complied dataset had 74 columns, covering the extracted or calculated data of housing description, details of the host, location, property conditions, price, availability, reviews and scores of reviews [6]. The detailed descriptions that containing interesting characteristics for target customers could be filtered through text mining, which allows the classifications of listings in various topics [7, 8]. The combination of price, availability and number of reviews may predict the possible annual yields and the housing vacancy rate [8]. Descriptions and scores of reviews may contribute to reflect the degree of preferences and perceived trust of guests on housing [9]. Location under any reasonable condition X could reveal certain geographic patterns.
 
 ---
 
 ### 5. To what extent is the data 'complete'?
-
-#### 200 words; 25 points; Reflecting on your earlier answers, to what extent is this data a ‘complete’ picture of the process that it claims to allow us to examine?
-
 Limitation of the scraper may sometimes randomly cause errors and inevitably lead to missing of data [4] or export no value when no data matched. A certain fraction of listings presented a series of missing data in the fields. For different purposes when utilizing the dataset, the missing data in certain fields have unequal explanatory power on ‘complete’. The absence of data can also be considered as a form of data. For instance, when examining reviews, listings that missing scores of reviews should be marked and considered separately.
 
 Structural omission of data is systematically existed. Data of gender, reviews and available language options about the host were not included and specified. In the field of amenities, the term that describes check-in services was missing. The number of positive and negative reviews of each listing were not given in the dataset, although it may not be accessed directly. Affected by the potential purpose of seeking negative impacts of short-term rentals, sort of data such as data listed above were unconsciously avoided. Such omission of data that may be attributed to the limited consideration of the process or potential bias could impact on the integrity and quality of the data [10].
@@ -57,9 +42,6 @@ Structural omission of data is systematically existed. Data of gender, reviews a
 ---
 
 ### 6. What kinds of analysis would this support?
-
-
-#### 200 words; 15 points; Given the issues discussed above, what kinds of analysis would this data support?
 Simple establishment of two models would be supported by this dataset: one is the estimated occupancy model based on the data of room type, availability 90 days in the future, reviews per month, average booking nights in London [5, 11]; the other one is the income model that could simulate the annual yields through price per night and occupancy rate. In consideration of the limitation of scraper and the omission of books per listing, the established models have great limitation in estimating the occupancy rate and the income. But a series analysis following these two models could still be subsequently proceeded.
 
 Example project [8] showed a nice  analysis on averages of price, income, scores of reviews within listings groups that filtered by topic tag that involved in the description. This analysis contributes to the exploration of relationship among reputation, customers’ expectation and popularity. Geographic patterns of aggregation of low-occupancy-rate and high-income are possible to be examined and investigated. Also, by comparing the average income from local rent with the short-term rental income from tourism, the contrast might make the process of gentrification much more visualized. In addition, study by Cocola-Gant and Gago [12] proposed a buy-to-let investment. In this aspect, it is possible to detailly check whether or not a host is against the law, by ranking the total counts of listings that a host has and examining the distribution of the listings.
@@ -68,9 +50,6 @@ Example project [8] showed a nice  analysis on averages of price, income, scores
 ---
 
 ### 7. Which of the uses presented in Q.6 are _ethical_?
-
-#### 350 words; 35 points; Which of the uses presented in Q.6 are ethical?  Justify the ethics of these analyses with reference to examples drawn from both your earlier answers and to the literature. 35 points
-
 As for the modelling of occupancy rate and income, it could be largely considered as ethical. As illustrated above, the collected data from Airbnb’s site were publicly transparent, which can be accessed by anyone. Although it may be argued that web mining raises privacy issues as customers are analyzed unknowingly [13]. The mentioned analysis associated with reviews that only focuses on scores and number should be anonymous, which should avoid the issues of personal privacy. In IA’s disclaimers, it was stated that location information of each listing was anonymized by Airbnb, which involved positioning deviation in certain scale [5]. Thus, there should be no ethic issues in the aspect of personal privacy. However, as the study [14] pointed out, in consideration of the underlaying bias and structural omission of data when collecting data, there still remains potential ethical issues of outcome responsibility and concerns of justice if insisted utilizing the dataset that was not fully validated as reliable.
 
 The outcome of such analysis mainly focuses on the short-term rental in the scale of the whole city instead of the locality. Nevertheless, overemphasis of trends in gentrification and of geographic patterns of condition X in the scale of global might produce ethical oversights, especially when no comprehensive understanding and explanation attached [15].
